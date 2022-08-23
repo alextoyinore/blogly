@@ -1,0 +1,52 @@
+{% extends '/admin/base.html' %} {% block title %} CreateAccount {% endblock
+%}{% block content %}
+
+<main>
+  <section>
+    <!-- Form for link urls -->
+    <form id="create-account-form" method="post">
+      <label id="text-logo" class="form-title">Blogly</label><br /><br />
+      <span
+        >Welcome to Blogly. This is your Admin area. Sign up for a new
+        account.</span
+      ><br /><br />
+
+      <input
+        placeholder="Username"
+        required
+        type="text"
+        name="username"
+        id=""
+        value=""
+      /><br />
+
+      <input
+        placeholder="Email"
+        required
+        type="email"
+        name="email"
+        id=""
+        value=""
+      /><br />
+
+      <input
+        placeholder="Password"
+        required
+        type="password"
+        name="password"
+        id=""
+        value=""
+      /><br />
+      <input class="btn-submit" type="submit" value="Create Account" /> <br />
+      <a
+        id="forgot-password"
+        class="small-link"
+        href="{{url_for('privacy_policy')}}"
+        >Privacy Policy</a
+      >
+      &nbsp; | &nbsp;
+      <a class="small-link" href="{{url_for('login')}}">Login</a>
+    </form>
+  </section>
+</main>
+{% endblock %}

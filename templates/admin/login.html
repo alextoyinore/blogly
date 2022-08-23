@@ -1,0 +1,41 @@
+{% extends '/admin/base.html' %} {% block title %} Log in {% endblock %}{% block
+content %}
+
+<main>
+  <section>
+    <!-- Form for link urls -->
+    <form id="login-form" method="post">
+      <label id="text-logo" class="form-title">Blogly</label><br /><br />
+      <span
+        >Welcome to Blogly. This is your Admin area. Login with your
+        credentials.</span
+      ><br /><br />
+
+      <input
+        placeholder="Username"
+        required
+        type="text"
+        name="username"
+        id=""
+        value=""
+      /><br />
+
+      <input
+        placeholder="Password"
+        required
+        type="password"
+        name="code"
+        id=""
+        value=""
+      /><br />
+      <input class="btn-submit" type="submit" value="Sign in" /> <br />
+      <a id="forgot-password" class="small-link" href="">Forgot password</a>
+      &nbsp; | &nbsp;
+      <a class="small-link" href="{{url_for('create_account')}}"
+        >Create Account</a
+      >
+    </form>
+  </section>
+</main>
+
+{% endblock %}
